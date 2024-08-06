@@ -1,0 +1,149 @@
+:root {
+    --grey-color: rgba(152, 147, 140, 0.638);
+    --dark-color: rgb(73, 72, 70);
+    --box-width: 350px;
+    --box-height: 450px;
+    --box-shadow: 2px 2px 5px 1px #000;
+    --yellow-color: rgb(245, 207, 18);
+    --dark-yellow-color: rgb(180, 156, 21);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.drum-machine {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-color);
+}
+
+.display {
+    width: 800px;
+    height: 500px;
+    background-color: var(--dark-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pads {
+    width: var(--box-width);
+    height: var(--box-height);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.controls {
+    width: var(--box-width);
+    height: var(--box-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drum-pad {
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    background-color: rgb(195, 191, 191);
+    font-weight: 800;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.drum-pad:hover {
+    background-color: var(--dark-yellow-color);
+}
+
+.drum-pad:active {
+    background-color: var(--yellow-color);
+}
+
+.controls-display {
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(195, 191, 191);
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.controls::before {
+    content: "";
+    position: absolute;
+    left: 51%;
+    width: 2px;
+    height: 500px;
+    background-color: var(--dark-yellow-color);
+}
+
+.volume-slider {
+    text-align: center;
+    color: var(--dark-yellow-color);
+    font-weight: 600;
+}
+
+.volume-display {
+    padding: 0px;
+    margin: 0px;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--dark-yellow-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb :active {
+    cursor: grab;
+}
+
+.power {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000; /* Red for off state */
+    box-shadow: var(--box-shadow);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -20px;
+}
+
+.power.active {
+    background-color: #00ff00; /* Green for on state */
+}
+
+h1{
+    margin-top: 0px;
+}
