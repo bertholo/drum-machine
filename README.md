@@ -10,3 +10,4 @@ A simple drum machine application built with HTML, CSS, and JavaScript. This app
 
 ## DEMO
 
+https://bertholo.github.io/drum-machine/
